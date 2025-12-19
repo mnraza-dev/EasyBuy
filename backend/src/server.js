@@ -1,7 +1,8 @@
+import express from "express"
 import app from "./app.js";
 import dotenv from "dotenv";
 import dbConnect from "./config/db.js";
-import router from "./routes/productRoutes.js";
+import product from "./routes/productRoutes.js";
 dotenv.config();
 
 const PORT = process.env.PORT || 3000
@@ -12,7 +13,10 @@ app.get("/health-check", (req, res) => {
     })
 })
 
-app.use('/', router)
+app.use(express.json());
+
+app.use('/api/v1', product)
+
 app.listen(PORT, () => {
     dbConnect()
     console.log(`Listening on server ${PORT}`);
