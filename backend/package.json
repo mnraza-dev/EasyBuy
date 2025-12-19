@@ -1,0 +1,22 @@
+{
+  "name": "easybuy-backend",
+  "version": "1.0.0",
+  "description": "A shopping platform",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": ["ecommerce","shopping","easybuy"],
+  "author": "MNRaza",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.1",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
